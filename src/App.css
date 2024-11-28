@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(5, 5, 38);
 }
 
 * {
@@ -10,45 +11,137 @@ body {
 }
 
 .container {
-  margin: 50px 100px;
+  margin: 50px auto;
+  padding: 0 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
   color: #fff;
+  min-width: 600px;
 }
 
 .jeremy {
   grid-row: 1 / span 2;
   background-color: rgb(41, 41, 96);
   border-radius: 10px;
- 
+
 }
 
 .jeremy-profile {
   background-color: rgb(84, 84, 232);
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.jeremy-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  
+}
+
+.jeremy-text-wrapper h4 {
+  margin: 0;
+  font-size: 10px;
+}
+
+ 
+.jeremy-text-wrapper h1 {
+  margin: 0;
+  font-size: 25px;
 }
 
 .jeremy-image {
-  width: 80px;
+  width: 50px;
   border-radius: 50%;
   border: 3px solid #fff;
   
 }
 
-.tabs {
+.tabs-container {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
 }
 
-.tabs h3:hover {
+.tabs {
+  color: rgb(101, 115, 136);
+ 
+}
+
+.active-tab {
+  color: #fff;
+  
+}
+
+.tabs-container h3 {
+  margin: 0;
+  font-size: 10px;
+}
+
+.tabs-container h3:hover {
   cursor: pointer;
-  color: rgb(203, 210, 217);
+  color: #fff
+}
+
+.cell-wrapper {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .cell {
   border-radius: 10px;
   background-color: rgb(41, 41, 96);
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cell h5, 
+.cell h2, 
+.cell h6 {
+  margin: 0;
+} 
+
+.cell h5 {
+  font-size: 10px;
+}
+
+.cell h6 {
+  color: rgb(86, 86, 138);
+}
+
+.orange {
+  background-color: hsl(15, 100%, 70%)
+}
+
+.blue {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.pink {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.green {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.purple {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.yellow {
+  background-color: hsl(43, 84%, 65%);
 }
