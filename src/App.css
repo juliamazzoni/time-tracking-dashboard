@@ -18,7 +18,7 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   color: #fff;
-  min-width: 600px;
+  width: 600px;
 }
 
 .jeremy {
@@ -97,6 +97,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.cell-wrapper img {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: -5px;
 }
 
 .cell {
@@ -106,6 +115,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 1;
+}
+
+.cell:hover {
+  background-color: rgb(60, 60, 95);
 }
 
 .cell h5, 
@@ -123,7 +137,8 @@ body {
 }
 
 .orange {
-  background-color: hsl(15, 100%, 70%)
+  background-color: hsl(15, 100%, 70%);
+  
 }
 
 .blue {
