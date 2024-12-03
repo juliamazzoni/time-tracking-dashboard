@@ -43,6 +43,7 @@ export const Dashboard = () => {
           backgroundColors: backgroundColors[index],
         }));
         setInitialState(initialState);
+        
       } catch (error) {
         console.error('Failed to fetch data:', error);
       }
