@@ -1,9 +1,12 @@
 
+@import url('https://fonts.google.com/specimen/Rubik');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(5, 5, 38);
+  font-family: 'Rubik';
 }
 
 * {
@@ -12,36 +15,35 @@ body {
 
 .container {
   margin: 50px auto;
-  padding: 0 100px;
+  padding: 0px 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 25px;
+  min-width: 375px;
   color: #fff;
-  width: 600px;
 }
 
 .jeremy {
-  grid-row: 1 / span 2;
+  grid-row: 1;
   background-color: rgb(41, 41, 96);
   border-radius: 10px;
-
 }
 
 .jeremy-profile {
   background-color: rgb(84, 84, 232);
   border-radius: 10px;
-  padding: 20px 20px 50px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }
 
 .jeremy-text-wrapper {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  
 }
 
 .jeremy-text-wrapper h4 {
@@ -49,7 +51,6 @@ body {
   font-size: 10px;
 }
 
- 
 .jeremy-text-wrapper h1 {
   margin: 0;
   font-size: 25px;
@@ -59,30 +60,27 @@ body {
   width: 50px;
   border-radius: 50%;
   border: 3px solid #fff;
-  
 }
 
 .tabs-container {
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 10px;
-
 }
 
 .tabs {
   color: rgb(101, 115, 136);
- 
 }
 
 .active-tab {
   color: #fff;
-  
 }
 
 .tabs-container h3 {
   margin: 0;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .tabs-container h3:hover {
@@ -102,7 +100,7 @@ body {
 }
 
 .cell-wrapper img {
-  width: 50px;
+  width: 80px;
   position: absolute;
   right: 10px;
   top: -5px;
@@ -129,16 +127,28 @@ body {
 } 
 
 .cell h5 {
-  font-size: 10px;
+  font-size: 18px;
+}
+
+.cell h2 {
+  font-size: 30px;
 }
 
 .cell h6 {
   color: rgb(86, 86, 138);
+  font-size: 15px;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .orange {
   background-color: hsl(15, 100%, 70%);
-  
 }
 
 .blue {
@@ -159,4 +169,78 @@ body {
 
 .yellow {
   background-color: hsl(43, 84%, 65%);
+}
+
+
+@media (min-width: 1440px) {
+
+.container {
+  margin: 150px auto;
+  padding: 0 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1440px;
+}
+
+.jeremy {
+  grid-row: 1 / span 2;
+}
+
+.jeremy-profile {
+  padding: 30px 30px 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.jeremy-image {
+  width: 100px;
+}
+
+.jeremy-text-wrapper h4 {
+  font-size: 20px;
+}
+
+.jeremy-text-wrapper h1 {
+  font-size: 45px;
+}
+
+.tabs-container {
+  padding: 30px;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.tabs-container h3 {
+  font-size: 25px;
+}
+
+.time {
+  flex-direction: column;
+  align-items: normal;
+  gap: 15px;
+}
+
+.cell {
+  gap: 40px;
+  padding: 25px;
+}
+
+.cell h5 {
+  font-size: 30px;
+}
+
+.cell h2 {
+  font-size: 70px;
+}
+
+.cell h6 {
+  font-size: 25px;
+}
+
+.cell-wrapper img {
+  width: 100px;
+}
+
 }
